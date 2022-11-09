@@ -1,11 +1,11 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-require("./config/db");
+require("../config/db");
 const PORT = process.env.PORT || 2120;
 const app = express();
-const userRoute = require("./router/userRouter");
-const diaryRoute = require("./router/diaryRouter");
+const userRoute = require("../router/userRouter");
+const diaryRoute = require("../router/diaryRouter");
 
 app.use(cors({ origin: "*" }));
 app.use(express.json());
